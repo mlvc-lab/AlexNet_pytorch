@@ -78,6 +78,12 @@ $ CUDA_VISIBLE_DEVICES=2 python3 main.py cifar10 -C
 $ python3 main.py cifar10 -C -g 0 1 2 3
 ```
 
+#### Resume training
+
+```shell
+$ python3 main.py cifar10 -C -r --ckpt ckpt_epoch_50.pth
+```
+
 ### Evaluation
 
 #### evaluate on CPU

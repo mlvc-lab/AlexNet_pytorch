@@ -76,9 +76,6 @@ def main():
             print('\n==> Loading Checkpoint \'{}\''.format(args.ckpt))
             checkpoint = load_model(model, ckpt_file, args)
 
-            start_epoch = checkpoint['epoch']
-            optimizer.load_state_dict(checkpoint['optimizer'])
-
             print('==> Loaded Checkpoint \'{}\' (epoch {})'.format(
                 args.ckpt, start_epoch))
 
