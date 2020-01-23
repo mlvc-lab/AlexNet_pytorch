@@ -30,9 +30,9 @@ def config():
     parser.add_argument('--ckpt', default='', type=str, metavar='PATH',
                         help='Path of checkpoint for resuming/testing '
                              'or retraining model (Default: none)')
-    parser.add_argument('-r', '--resume', dest='resume', action='store_true',
+    parser.add_argument('-R', '--resume', dest='resume', action='store_true',
                         help='Resume model?')
-    parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
+    parser.add_argument('-E', '--evaluate', dest='evaluate', action='store_true',
                         help='Test model?')
     parser.add_argument('-C', '--cuda', dest='cuda', action='store_true',
                         help='Use cuda?')

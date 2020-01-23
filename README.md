@@ -15,7 +15,7 @@ You can train on any device (e.g. CPU / single GPU / multi GPU) and resume or te
 
 ```
 usage: main.py [-h] [-j N] [-b N] [--epochs N] [--lr LR] [--momentum M]
-               [--wd W] [-p N] [--ckpt PATH] [-r] [-e] [-C]
+               [--wd W] [-p N] [--ckpt PATH] [-R] [-E] [-C]
                [-g GPUIDS [GPUIDS ...]] [--datapath PATH]
                DATA
 
@@ -37,8 +37,8 @@ optional arguments:
   -p N, --print-freq N  print frequency (default: 50)
   --ckpt PATH           Path of checkpoint for resuming/testing or retraining
                         model (Default: none)
-  -r, --resume          Resume model?
-  -e, --evaluate        Test model?
+  -R, --resume          Resume model?
+  -E, --evaluate        Evaluate model?
   -C, --cuda            Use cuda?
   -g GPUIDS [GPUIDS ...], --gpuids GPUIDS [GPUIDS ...]
                         GPU IDs for using (Default: 0)
@@ -81,7 +81,7 @@ $ python3 main.py cifar10 -C -g 0 1 2 3
 #### Resume training
 
 ```shell
-$ python3 main.py cifar10 -C -r --ckpt ckpt_epoch_50.pth
+$ python3 main.py cifar10 -C -R --ckpt ckpt_epoch_50.pth
 ```
 
 ### Evaluation
@@ -89,13 +89,13 @@ $ python3 main.py cifar10 -C -r --ckpt ckpt_epoch_50.pth
 #### evaluate on CPU
 
 ```shell
-$ python3 main.py cifar10 -e --ckpt ckpt_best.pth
+$ python3 main.py cifar10 -E --ckpt ckpt_best.pth
 ```
 
 #### evaluate on GPU
 
 ```shell
-$ python3 main.py cifar10 -C -e --ckpt ckpt_best.pth
+$ python3 main.py cifar10 -C -E --ckpt ckpt_best.pth
 ```
 
 ## References
